@@ -11,12 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Route::group(array('prefix' => 'api/v1'), function() {
     Route::resource('orders','OrdersController');
 });
+/*
+Route::group(array('prefix' => 'api/v1','middleware'=>'auth.basic'), function() {
+    Route::resource('orders','OrdersController');
+});*/
 
 
