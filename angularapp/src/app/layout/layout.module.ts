@@ -15,12 +15,12 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
         NgbDropdownModule.forRoot(),
         LayoutRoutingModule,
         TranslateModule
-
     ],
     declarations: [
         LayoutComponent,
-        SidebarComponent,
-        HeaderComponent
+        HeaderComponent,
+        SidebarComponent
+
     ]
 })
 export class LayoutModule { }
