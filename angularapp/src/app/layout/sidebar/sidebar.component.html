@@ -1,6 +1,6 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
     <ul class="list-group">
-        <a *ngFor="let sidebar of sidebarlinks" class="list-group-item" routerLink="{{sidebar.link}}" [routerLinkActive]="['router-link-active']">
+        <a *ngFor="let sidebar of sidebarPromise | async" class="list-group-item" routerLink="{{sidebar.link}}" [routerLinkActive]="['router-link-active']">
             <i class="{{sidebar.icon}}"></i>&nbsp;{{sidebar.translation | translate}}
         </a>
     </ul>

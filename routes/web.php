@@ -11,16 +11,12 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::group(array('prefix' => 'api/v1'), function() {
     Route::resource('orders','OrdersController');
+
+    //just fot test how to get in angular
+    Route::get('/sidebarLinks','PageController@getSidebarLinks');
 });
-/*
-Route::group(array('prefix' => 'api/v1','middleware'=>'auth.basic'), function() {
-    Route::resource('orders','OrdersController');
-});*/
+
 
 

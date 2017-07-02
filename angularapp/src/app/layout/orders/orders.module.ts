@@ -7,7 +7,6 @@ import { OrdersRoutingModule } from './orders-grid-routing.module';
 @NgModule({
   imports: [
     OrdersRoutingModule
-
   ],
   declarations: [OrdersGridComponent]
 })

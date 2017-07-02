@@ -1,4 +1,3 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -12,38 +11,33 @@
 In this aplication we use Laravel 5.4 as backend development and Angular 4.2.4 as frontend development.
 It's simple project with REST technology.
 
-##Used server packages
+## Used server packages
     - php 5.6 or above
     - node js 8.0.0
     - npm 5.0.3
     - scotchbox 3.0
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+    - vagrant
+## Run application
+In root folder there is Vagrant file configurations using scotchbox box.
 
-## Learning Laravel
+    -vagrant up
+    -vagrant ssh
+    -go to angularapp folder
+    -ng serve --poll=2000 --port 8080 --host 192.168.33.10
+    
+On 192.168.33.10 is laravel api
+On 192.168.33.10:8080 is our angular website
+    
+## Laravel REST api
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+In root folder is complete Laravel project.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+Example call : 
+http://192.168.33.10/api/v1/orders
 
-## Laravel Sponsors
+returns JSON array of objects of current orders (dummy)
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+## Angular admin
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+In directory Angularapp is complete angular project. 
+Please be aware you need to run in that folder and run ng serve --poll=2000 --port 8080 --host 192.168.33.10
