@@ -30,7 +30,6 @@ export class SidebarComponent implements OnInit{
         sidebar => this.sidebar = sidebar,
         error => this.errorMessage=<any>error
     );
-    console.log(this.sidebar);
   }
   ngOnInit(): void{
     this.getSidebarLinks();

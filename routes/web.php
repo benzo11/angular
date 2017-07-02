@@ -16,6 +16,7 @@ Route::group(array('prefix' => 'api/v1'), function() {
 
     //just fot test how to get in angular
     Route::get('/sidebarLinks','PageController@getSidebarLinks');
+    Route::post('/sidebarLinks','PageController@saveNewLink');
 });
 
 

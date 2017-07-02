@@ -26,6 +26,24 @@ export class SidebarService {
             .catch(this.handleError);
     }
 
+    addLinkApi(): Promise<SidebarLink[]>{
+        var url  = "http://192.168.33.10/api/v1/sidebarLinks";
+        console.log("asdasd");
+        return this.http.post(url,"{id:'1'}",{headers: this.getHeaders()})
+            .toPromise()
+            .then(this.extractData)
+            .then(this.handleError);
+    }
+
+
+    private getHeaders(){
+        // I included these headers because otherwise FireFox
+        // will request text/html
+        let headers = new Headers();
+        headers.append('Content-Type','application/x-www-form-urlencoded');
+        //headers.append('csrf_token,'CSRF_TOKEN');
+        return headers;
+    }
 
     private extractData(res: Response) {
         let body = res.json();

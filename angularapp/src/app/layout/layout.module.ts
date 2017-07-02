@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule }   from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
@@ -15,7 +16,8 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
         NgbDropdownModule.forRoot(),
         LayoutRoutingModule,
         TranslateModule,
-        HttpModule
+        HttpModule,
+        FormsModule
     ],
     declarations: [
         LayoutComponent,
